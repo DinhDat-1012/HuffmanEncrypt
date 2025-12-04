@@ -34,7 +34,7 @@ string readFile(const string& filename) {
 
     ifstream file(filename, ios::binary);
     if (!file.is_open()) {
-        cerr << "Lỗi: Không thể mở file " << filename << endl;
+        cerr << "Error, can not open this file" << filename << endl;
         return "";
     }
 
@@ -42,7 +42,7 @@ string readFile(const string& filename) {
     file.close();
 
     double end_time = omp_get_wtime();
-    cout << "Thời gian đọc file: " << (end_time - start_time) << " giây" << endl;
+    cout << "Time to read file: " << (end_time - start_time) << " s" << endl;
 
     return content;
 }
@@ -51,7 +51,7 @@ string readFile(const string& filename) {
 bool writeFile(const string& filename, const string& content) {
     ofstream file(filename, ios::binary);
     if (!file.is_open()) {
-        cerr << "Lỗi: Không thể ghi file " << filename << endl;
+        cerr << "Error ! can not write file! " << filename << endl;
         return false;
     }
 
@@ -88,7 +88,7 @@ map<char, int> countFrequency(const string& data, int num_threads) {
     }
 
     double end_time = omp_get_wtime();
-    cout << "Thời gian đếm tần suất: " << (end_time - start_time) << " giây" << endl;
+    cout << "Time to count: " << (end_time - start_time) << " s" << endl;
 
     return freq;
 }
@@ -110,7 +110,7 @@ HuffmanNode* buildHuffmanTree(map<char, int>& freq) {
         root->left = pq.top();
         pq.pop();
         double end_time = omp_get_wtime();
-        cout << "Thời gian xây dựng cây Huffman: " << (end_time - start_time) << " giây" << endl;
+        cout << "Time to initial Huffman tree: " << (end_time - start_time) << " s" << endl;
         return root;
     }
 
@@ -127,7 +127,7 @@ HuffmanNode* buildHuffmanTree(map<char, int>& freq) {
     }
 
     double end_time = omp_get_wtime();
-    cout << "Thời gian xây dựng cây Huffman: " << (end_time - start_time) << " giây" << endl;
+    cout << "Time to initial Huffman tree: " << (end_time - start_time) << " s" << endl;
 
     return pq.top();
 }
@@ -166,7 +166,7 @@ string encodeData(const string& data, map<char, string>& huffmanCodes, int num_t
     }
 
     double end_time = omp_get_wtime();
-    cout << "Thời gian mã hóa: " << (end_time - start_time) << " giây" << endl;
+    cout << "Time to encrypt: " << (end_time - start_time) << " s" << endl;
 
     return encoded;
 }
@@ -231,7 +231,7 @@ string decodeData(const string& encodedBits, HuffmanNode* root) {
     }
 
     double end_time = omp_get_wtime();
-    cout << "Thời gian giải mã: " << (end_time - start_time) << " giây" << endl;
+    cout << "Time decrypt: " << (end_time - start_time) << " s" << endl;
 
     return decoded;
 }
@@ -317,11 +317,11 @@ int main() {
     // Nhập tên file
     string input_filename;
     cout << "\n  Enter input file path: ";
-    input_filename = "C:\\Users\\dinhd\\Downloads\\1KB.txt";
+    std::cin >> input_filename;
 
     // Nếu user không nhập gì, dùng default
-    if (input_filename.empty()) {
-        input_filename = "input.txt";
+    if (input_filename == "1") {
+        input_filename = "C:\\Users\\dinhd\\Downloads\\1KB.txt";
         cout << "  [!] Using default: " << input_filename << endl;
     }
 
