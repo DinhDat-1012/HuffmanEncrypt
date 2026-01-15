@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\HuffmanEncrypt.dir\\Sampletxtfile\\huffmanCompressPar.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

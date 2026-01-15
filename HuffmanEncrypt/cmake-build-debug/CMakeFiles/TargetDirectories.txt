@@ -1,0 +1,3 @@
+C:/Users/dinhd/OneDrive/Desktop/HuffmanEncrypt/cmake-build-debug/CMakeFiles/HuffmanEncrypt.dir
+C:/Users/dinhd/OneDrive/Desktop/HuffmanEncrypt/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dinhd/OneDrive/Desktop/HuffmanEncrypt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

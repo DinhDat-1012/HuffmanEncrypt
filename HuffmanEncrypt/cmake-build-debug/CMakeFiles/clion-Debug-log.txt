@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2025.2.5\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2025.2.5/bin/ninja/win/x64/ninja.exe" -DCMAKE_C_COMPILER=C:/msys64/ucrt64/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/msys64/ucrt64/bin/g++.exe -G Ninja -S C:\Users\dinhd\OneDrive\Desktop\HuffmanEncrypt -B C:\Users\dinhd\OneDrive\Desktop\HuffmanEncrypt\cmake-build-debug
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/dinhd/OneDrive/Desktop/HuffmanEncrypt/cmake-build-debug
